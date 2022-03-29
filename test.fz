@@ -1,0 +1,13 @@
+c is
+
+  int:i32 is
+  const_char_p:u32 is
+  unsigned_long:u64 is
+  void:unit is
+
+  test_h is
+    cool_function(i int, j int) void is intrinsic
+    cool_function2(i int, j int) void is intrinsic
+    CXUnsavedFile is
+      Filename const_char_p is
+      Length unsigned_long is
