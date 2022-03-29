@@ -50,7 +50,7 @@ enum CXChildVisitResult visit(CXCursor c, CXCursor parent, CXClientData client_d
         break;
       case CXCursor_FieldDecl:
         printf("      %s", clang_getCString((clang_getCursorSpelling(c))));
-        printf(":");
+        printf(" ");
         printf("%s is\n", mangle(clang_getCString((clang_getTypeSpelling(clang_getCursorType(c))))));
         break;
       default:
@@ -75,11 +75,11 @@ int main(int argc, char **argv) {
     exit(1);
   }
 
-  printf("c is\n");
+  printf("c is\n\n");
   printf("  int:i32 is\n");
   printf("  const_char_p:u32 is\n");
   printf("  unsigned_long:u64 is\n");
-  printf("  void:unit is\n");
+  printf("  void:unit is\n\n");
   printf("  %s is\n", replace_char(argv[1], '.', '_'));
 
   CXCursor cursor = clang_getTranslationUnitCursor(unit);
